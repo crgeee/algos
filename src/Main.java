@@ -1,6 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
+        Printer print = new Printer();
+
         // QUICK FIND
         System.out.println("BEGIN Quick Find");
         QuickFindUF quickFindUF = new QuickFindUF(10);
@@ -20,8 +22,7 @@ public class Main {
         TwoSums twoSums = new TwoSums();
         // test 1
         int[] result1 = twoSums.bruteForce(new int[] {2, 7, 11, 15}, 9);
-        System.out.println("result1: " + java.util.Arrays.toString(result1));
-
+        print.newLine("two sums", "brute force", "[0,1]", java.util.Arrays.toString(result1), "");
         // two pass
         int [] result2 = twoSums.twoPassHash(new int[] {2, 7, 11, 15}, 9);
         System.out.println("result2: " + java.util.Arrays.toString(result2));
