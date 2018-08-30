@@ -2,6 +2,8 @@ public class Main {
 
     public static void main(String[] args) {
         Printer print = new Printer();
+        long startTime;
+        long stopTime;
 
         // QUICK FIND
         System.out.println("BEGIN Quick Find");
@@ -21,8 +23,12 @@ public class Main {
         // brute force
         TwoSums twoSums = new TwoSums();
         // test 1
+        startTime = System.nanoTime();
         int[] result1 = twoSums.bruteForce(new int[] {2, 7, 11, 15}, 9);
-        print.newLine("two sums", "brute force", "[0,1]", java.util.Arrays.toString(result1), "");
+        stopTime = System.nanoTime();
+        print.newLine("two sums", "brute force", "[0,1]",
+                java.util.Arrays.toString(result1), startTime, stopTime);
+
         // two pass
         int [] result2 = twoSums.twoPassHash(new int[] {2, 7, 11, 15}, 9);
         System.out.println("result2: " + java.util.Arrays.toString(result2));
@@ -33,8 +39,7 @@ public class Main {
 
         // palindrome number
         PalindromeNumber palNum = new PalindromeNumber();
-        long startTime;
-        long stopTime;
+
 
         // test 1
         startTime = System.nanoTime();
@@ -93,5 +98,43 @@ public class Main {
         stopTime = System.nanoTime();
         System.out.println("result11: " + result11);
         System.out.println(stopTime - startTime);
+
+        // Given an array of integers, return a new array such that each element at index i of the new array is the
+        // product of all the numbers in the original array except the one at i.
+        //
+        //For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]. If our
+        // input was [3, 2, 1], the expected output would be [2, 3, 6].
+        DailyCoding082918 dailyCoding082918 = new DailyCoding082918();
+        int[] result100;
+
+        // test 1
+        int[] testInput = new int[] {3, 2, 1};
+        startTime = System.nanoTime();
+        result100 = dailyCoding082918.tryOne(testInput);
+        stopTime = System.nanoTime();
+        print.newLine("DailyCoding082918", "brute force", "[2, 3, 6]",
+                java.util.Arrays.toString(result100), startTime, stopTime);
+
+        // test 2
+        int[] testInput2 = new int[] {1,2,3,4,5};
+        startTime = System.nanoTime();
+        result100 = dailyCoding082918.tryOne(testInput2);
+        stopTime = System.nanoTime();
+        print.newLine("DailyCoding082918", "brute force", "[120, 60, 40, 30, 24]",
+                java.util.Arrays.toString(result100), startTime, stopTime);
+
+        // test 3
+        startTime = System.nanoTime();
+        result100 = dailyCoding082918.tryTwo(testInput);
+        stopTime = System.nanoTime();
+        print.newLine("DailyCoding082918", "brute force", "[2, 3, 6]",
+                java.util.Arrays.toString(result100), startTime, stopTime);
+
+        // test 4
+        startTime = System.nanoTime();
+        result100 = dailyCoding082918.tryOne(testInput2);
+        stopTime = System.nanoTime();
+        print.newLine("DailyCoding082918", "brute force", "[120, 60, 40, 30, 24]",
+                java.util.Arrays.toString(result100), startTime, stopTime);
     }
 }
