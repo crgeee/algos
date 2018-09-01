@@ -1,9 +1,17 @@
+package main.java.helpers;
+
 public class Printer {
-    public void newLine(String category, String testName, String expected, String actual, long startTime, long stopTime) {
+    private String category;
+
+    public Printer(String category) {
+        this.category = category;
+    };
+
+    public void newLine(String testName, String expected, String actual, long startTime, long stopTime) {
         long elapsed = stopTime - startTime;
         StringBuilder sb = new StringBuilder();
 
-        sb.append("[" + category + "] ");
+        sb.append("[" + this.category + "] ");
         sb.append(testName);
         sb.append(" || ");
         sb.append("passed: " + actual.equals(expected));

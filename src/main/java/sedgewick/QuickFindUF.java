@@ -1,3 +1,5 @@
+package main.java.sedgewick;
+
 public class QuickFindUF {
     private int[] id;
 
