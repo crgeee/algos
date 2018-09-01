@@ -15,7 +15,7 @@ public class LeetcodeTests {
         startTime = System.nanoTime();
         int[] result1 = twoSums.bruteForce(new int[] {2, 7, 11, 15}, 9);
         stopTime = System.nanoTime();
-        print.newLine( "two sum brute force", "[0,1]",
+        print.newLine( "two sum brute force", "[0, 1]",
                 java.util.Arrays.toString(result1), startTime, stopTime);
 
         // two pass

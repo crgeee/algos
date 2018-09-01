@@ -19,6 +19,7 @@ public class Printer {
         sb.append("elapsed: " + Long.toString(elapsed));
         sb.append(" || ");
         sb.append("expected: " + expected + " ");
+        sb.append(" || ");
         sb.append("actual: " + actual + " ");
 
         System.out.println(sb.toString());
