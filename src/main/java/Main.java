@@ -13,7 +13,6 @@ public class Main {
         LeetcodeTests leetcodeTests = new LeetcodeTests();
         leetcodeTests.execute();
 
-        
         DailycodingTests dailycodingTests = new DailycodingTests();
         dailycodingTests.execute();
     }
