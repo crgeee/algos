@@ -56,6 +56,7 @@ public class SedgewickTests {
         print.newLine("Quick Union", "true", Boolean.toString(quickUnion.connected(0, 6)), startTime, stopTime);
         System.out.println("ids: " + quickUnion.getIdsAsString());
         //endregion QUICK UNION
+        
 
         //region QUICK UNION WEIGHTED
         QuickUnionWeightedUF quickUnionWeighted = new QuickUnionWeightedUF(100);
