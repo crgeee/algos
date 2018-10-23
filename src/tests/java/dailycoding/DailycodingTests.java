@@ -16,6 +16,7 @@
  */
 package tests.java.dailycoding;
 
+import main.java.dailycoding.problem_18;
 import main.java.dailycoding.problem_20180829;
 import main.java.helpers.Printer;
 
@@ -63,5 +64,10 @@ public class DailycodingTests {
         stopTime = System.nanoTime();
         print.newLine("brute force", "[120, 60, 40, 30, 24]",
                 java.util.Arrays.toString(result100), startTime, stopTime);
+
+
+        // problem 18
+        problem_18 problem_18 = new problem_18();
+        problem_18.tryOne(new int[] {10, 5, 2, 7, 8, 7}, 3);
     }
 }
