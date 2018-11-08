@@ -1,7 +1,5 @@
 package main.java.grokking;
 
-import main.java.helpers.Printer;
-
 import java.util.Arrays;
 
 public class ch4 {

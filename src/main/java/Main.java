@@ -1,8 +1,10 @@
 package main.java;
 
+import tests.java.cracking.ch10Tests;
 import tests.java.cracking.ch1Tests;
 import tests.java.dailycoding.DailycodingTests;
 import tests.java.grokking.ch4Tests;
+import tests.java.hackerrank.fibonacciTests;
 import tests.java.leetcode.LeetcodeTests;
 import tests.java.sedgewick.SedgewickTests;
 
@@ -33,5 +35,13 @@ public class Main {
         crackingCh1Tests.execute();
 
         System.out.println();
+
+        ch10Tests crackingCh10Tests = new ch10Tests();
+        crackingCh10Tests.execute();
+
+        System.out.println();
+
+        fibonacciTests fibonacciTests = new fibonacciTests();
+        fibonacciTests.execute();
     }
 }

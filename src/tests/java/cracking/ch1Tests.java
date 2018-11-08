@@ -5,7 +5,7 @@ import main.java.helpers.Printer;
 
 public class ch1Tests {
     public void execute() {
-        Printer print = new Printer("cracking");
+        Printer print = new Printer("cracking ch1");
         long startTime;
         long stopTime;
 
